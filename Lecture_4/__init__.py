@@ -7,9 +7,9 @@ if __name__ == '__main__':
     API_KEY = "sk_yy5S2r1SmOL5ZZcNuL5IA"
 
     env = gym.make('CartPole-v0')
-    env = gym.wrappers.Monitor(env, 'cartplole', force=True)
-
-    alg = Evolution_algorithms(f, env).nes()
+    env = gym.wrappers.Monitor(env, 'cartplole')
+    # env.reset()
+    alg = Evolution_algorithms(f, env).cem()
 
     env.close()
     gym.upload('cartpole', api_key=API_KEY)
