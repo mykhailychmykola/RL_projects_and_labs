@@ -2,6 +2,7 @@ import numpy as np
 
 
 class Evolution_algorithms(object):
+
     def __init__(self, f, env):
         self.f = f
         self.env = env
